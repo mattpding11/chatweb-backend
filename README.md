@@ -13,11 +13,17 @@ Proyecto de chatweb con nodejs, express y socket.io
 ## 1. Clonar el repositorio o Descargar
 
 ```bash
-git clone https://github.com/mattpding11/chatweb-backend.git
+git clone https://github.com/mattpding11/chatweb-frontend.git
 cd chatweb-frontend
 ```
 
-## 2. Instalar dependencias y correr app
+---
+
+## 2. Agregar un archivo llamado ".env" en la raiz de la carpeta y copiar y pegar el contenido del archivo ".env.dev" al nuevo archivo ".env"
+
+---
+
+## 3. Instalar dependencias y correr app
 ```bash
 npm i
 ```
