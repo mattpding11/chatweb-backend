@@ -13,8 +13,8 @@ Proyecto de chatweb con nodejs, express y socket.io
 ## 1. Clonar el repositorio o Descargar
 
 ```bash
-git clone https://github.com/mattpding11/chatweb-frontend.git
-cd chatweb-frontend
+git clone https://github.com/mattpding11/chatweb-backend.git
+cd chatweb-backend
 ```
 
 ---
