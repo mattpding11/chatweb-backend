@@ -1,4 +1,4 @@
-const { dotenv } = require('./src/libs/index')
+const { dotenv } = require('./src/libs')
 
 dotenv.config();
 

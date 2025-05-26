@@ -1,4 +1,4 @@
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const userService = require("../services/userService");
 const tokenService = require("../services/tokenService");
 

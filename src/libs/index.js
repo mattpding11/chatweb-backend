@@ -6,6 +6,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const socket = require("socket.io");
 const http = require("http");
+const helmet = require("helmet");
 
 // Barriel file to import third party modules
 module.exports = {
@@ -18,5 +19,6 @@ module.exports = {
     Router,
     jwt,
     socket,
-    http
+    http,
+    helmet
   };

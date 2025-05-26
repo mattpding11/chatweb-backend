@@ -5,8 +5,8 @@ const findByUsername = async (username) => {
 };
 
 const addUser = async (username, passwordHash, avatar) => {
-  users.push({ id: users.length+1, username, passwordHash, avatar});
-  console.log(users)
+  users.push({ id: users.length+1, username, passwordHash, avatar: avatar+(users.length)});
+  console.log(users);
   return users.length;
 };
 

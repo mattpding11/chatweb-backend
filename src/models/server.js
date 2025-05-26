@@ -1,4 +1,4 @@
-const { express, cors, socket, http } = require("../libs/index");
+const { express, cors, socket, http, helmet } = require("../libs/index");
 const { PORT, URL_FRONT } = require("../config/index");
 const authRoutes = require("../routes/auth");
 const secretRoute = require("../routes/secret");
@@ -41,7 +41,10 @@ class Server {
 
     middlewares() {
         // CORS
-        this.#app.use(cors());
+        this.#app.use(cors({origin:URL_FRONT}));
+
+        // Helmet headers
+        this.#app.use(helmet());
 
         // Body parse
         this.#app.use(express.json());
@@ -58,15 +61,17 @@ class Server {
     //     });
     // }
 
+    sockets() {
+        this.#io.on("connection", (socket) => socketController(socket));
+    }
+
+
     listen() {
         this.#server.listen(this.#port, () => {
         console.log("Servidor HTTP corriendo en el puerto", this.#port);
         });
     }
 
-    sockets() {
-        this.#io.on("connection", (socket) => socketController(socket));
-    }
 }
 
 module.exports = Server;
